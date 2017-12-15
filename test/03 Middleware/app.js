@@ -18,6 +18,10 @@ app.get('/articles', (req,res) => {
     ]);
 });
 
+app.post('/articles', (req,res) => {
+    res.send(req.body);
+});
+
 const server = http.createServer(app);
 
 server.listen(3000, () => {
