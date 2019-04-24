@@ -24,3 +24,4 @@ function newChore() {
 function editChore(chore) {
     console.log(chore ? "Hausarbeit bearbeiten" : "Neue Hausarbeit");
 }
+
