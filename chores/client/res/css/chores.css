@@ -1,0 +1,22 @@
+.main {
+    background-color: #999999;
+}
+
+.cardcontainer {
+    background-color: #DDDDDD;
+}
+
+.collapsible {
+    background-color: transparent;
+    text-align: left;
+    margin-top: 0.5em;
+    margin-bottom: 0.5em;
+    border: none;
+    outline: none;
+    cursor: pointer;
+    transition: 1.4ms;
+}
+
+.collapsible-content {
+    display:none;
+}

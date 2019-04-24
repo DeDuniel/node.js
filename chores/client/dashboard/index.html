@@ -14,43 +14,36 @@
 
     <link rel="manifest" href="../manifest.json">
 
-    <link href="//cdnjs.cloudflare.com/ajax/libs/font-awesome/3.1.0/css/font-awesome.min.css" rel="stylesheet" type="text/css" />
-    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet" integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS"
-        crossorigin="anonymous">
+    <link rel="stylesheet" href="https://use.fontawesome.com/releases/v5.8.1/css/all.css" integrity="sha384-50oBUHEmvpQ+1lW4y57PTFmhCaXp0ML5d60M1M7uH2+nqUivzIebhndOJK28anvf" crossorigin="anonymous">
+    
+    <link href="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/css/bootstrap.min.css" rel="stylesheet"
+        integrity="sha384-GJzZqFGwb1QTTN6wy59ffF1BuGJpLSa9DkKMp0DgiMDm4iYMj70gZWKYbI706tWS" crossorigin="anonymous">
 
-    <link href="/res/css/chores.css" rel="stylesheet" type="text/css" />
-    <link href="/res/img/icons/favicon.ico" rel="icon" type="image/icon" />
+    <link href="../res/css/chores.css" rel="stylesheet" type="text/css" />
+    <link href="../res/img/icons/favicon.ico" rel="icon" type="image/icon" />
+
+    <!-- <script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js"
+    integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
+    crossorigin="anonymous"></script> -->
+    <script src="dashboard.js"></script>
 </head>
 
 <body>
 
-    <div class="header" style="background-color:greenyellow">
-        <nav class="navbar">
-            <a class="navbar-brand nav-item homebutton" id="homebutton" href="#">Hausarbeitsverteilung!</a>
-            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarChores">
-                <span class="navbar-toggler-icon">V</span>
-            </button>
-
-            <div class="collapse navbar-collapse" id="navbarChores">
-                <ul class="navbar-nav mr-auto">
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Neu</a>
-                    </li>
-                    <li class="nav-item">
-                        <a class="nav-link" href="#">Aktualisieren</a>
-                    </li>
-                    <li class="nav-item">
-                        <form class="form-inline">
-                            <input class="form-control" type="search" placeholder="Suchen" aria-label="Search">
-                            <button class="btn" type="submit">Suchen</button>
-                        </form>
-                    </li>
-
-                </ul>
-            </div>
-
-        </nav>
-    </div>
+    <nav class="container header" style="background-color:greenyellow">
+        <button class="collapsible"><i class="fas fa-bars"></i></button>
+        <div class="collapsible-content">
+            <ul class="navbar-nav mr-auto">
+                <li class="nav-item">
+                    <a class="nav-link" href="#" onclick="newChore()">Neu</a>
+                </li>
+                <li class="nav-item">
+                    <a class="nav-link" href="#">Aktualisieren</a>
+                </li>
+                
+            </ul>
+        </div>
+    </nav>
 
     <div class="container main">
         <div class="main--header">
@@ -67,9 +60,12 @@
                 Cardcontainer-Footer
             </div>
         </div>
+        <div class="main--footer">
+
+        </div>
     </div>
 
-    <div class="loader">
+    <div class="loader invisible">
         <div class="spinner-border" role="status"></div>
     </div>
 
@@ -100,12 +96,5 @@
 <template id="template-chore-detail">
     <!-- Template Aufgaben-Neu/Edit -->
 </template>
-
-
-<script src="https://code.jquery.com/jquery-3.2.1.slim.min.js" integrity="sha384-KJ3o2DKtIkvYIK3UENzmM7KCkRr/rE9/Qpg6aAZGJwFDMVNA/GpGFF93hXpG5KkN"
-    crossorigin="anonymous"></script>
-<script src="https://stackpath.bootstrapcdn.com/bootstrap/4.2.1/js/bootstrap.min.js" integrity="sha384-B0UglyR+jN6CkvvICOB2joaf5I4l3gm9GU6Hc1og6Ls7i6U/mkkaduKaBhlAXv9k"
-    crossorigin="anonymous"></script>
-<script src="dashboard.js"></script>
 
 </html>
