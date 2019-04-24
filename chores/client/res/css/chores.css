@@ -1,3 +1,9 @@
+.header {
+    display: grid;
+    grid-template-columns: 5% auto;
+    
+}
+
 .main {
     background-color: #999999;
 }
@@ -14,7 +20,6 @@
     border: none;
     outline: none;
     cursor: pointer;
-    transition: 1.4ms;
 }
 
 .collapsible-content {

@@ -30,9 +30,10 @@
 
 <body>
 
-    <nav class="container header" style="background-color:greenyellow">
-        <button class="collapsible"><i class="fas fa-bars"></i></button>
-        <div class="collapsible-content">
+    <nav class="container-fluid header" style="background-color:greenyellow">
+        <button class="collapsible" id="navButton" onclick="toggleNavbar()"><i class="fas fa-bars"></i></button>
+        <div class="h3">Hausarbeitsverteilung</div>
+        <div class="collapsible-content" id="navCollapse">
             <ul class="navbar-nav mr-auto">
                 <li class="nav-item">
                     <a class="nav-link" href="#" onclick="newChore()">Neu</a>
@@ -45,7 +46,7 @@
         </div>
     </nav>
 
-    <div class="container main">
+    <div class="container-fluid main">
         <div class="main--header">
             <p class="main--header-login">Eingeloggt als</p>
         </div>

@@ -1,31 +1,26 @@
-window.onload = function() {
-    initCollapsibles();
+var navButton;
+var navCollapse;
+
+window.onload = function () {
+    navButton = document.getElementById("navButton");
+    navCollapse = document.getElementById("navCollapse");
 }
 
-function initCollapsibles() {
-    var collapsibles = document.getElementsByClassName("collapsible");
-    var c;
-    
-    for (i=0;i<collapsibles.length;i++){
-        c = collapsibles[i];
-        c.addEventListener("click", function(){
-            this.classList.toggle("active");
+function toggleNavbar() {
+    navButton.classList.toggle("active");
 
-            var panel = this.nextElementSibling;
-            if (this.classList.contains("active")) {
-                panel.style.display = "block";
-            } else {
-                panel.style.display = "none";
-            }
-        })
+    if (navButton.classList.contains("active")) {
+        navCollapse.style.display = "block";
+    } else {
+        navCollapse.style.display = "none";
     }
-    
+
 }
 
-function newChore(){
+function newChore() {
     return editChore();
 }
 
-function editChore(chore){
-    console.log(chore? "Hausarbeit bearbeiten" : "Neue Hausarbeit");
+function editChore(chore) {
+    console.log(chore ? "Hausarbeit bearbeiten" : "Neue Hausarbeit");
 }
